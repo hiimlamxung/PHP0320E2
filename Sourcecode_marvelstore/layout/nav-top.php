@@ -1,0 +1,156 @@
+<div class="container-fluid" style="background: black;">
+	<div class="row">
+		<div class="container">
+			<nav class="navbar" id="nav-bar">
+				<div class="navbar-header"  style="position: relative;">
+					<button type="button" class="navbar-toggle bt-navtop-res" data-toggle="collapse" data-target=".navbar-ex2-collapse" style="border: 1px solid #FA1C1C;">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar" style="color: red; padding-bottom: 20px"><i class="fa fa-bars" aria-hidden="true" style="color: red"></i></span>
+					</button>
+					
+					<div class="input-res">
+						<form action="search" method="POST">
+							<div class="input-group" style="display: flex">
+								<input type="text" name="search" class="form-control" placeholder="Tìm kiếm" id="input_search_top">
+								<span class="input-group-btn">
+									<button type="submit" name="submit-search" class="btn btn-default" id="button_search_top"><i class="fa fa-search fa-1x" aria-hidden="true"></i></button>
+									<!-- /input-group -->
+								</span>
+							</div>
+						</form>
+					</div>
+					<div id="box_cart_res">
+					<div class="icon-nav-res" style="position: absolute; right: -10px; top: 10px;">
+						<a href="info/info-user"><i class="fa fa-user-circle-o fa-2x icon-header" aria-hidden="true" style="color: #fff"></i></a>
+						<span class="show-cart">
+							<a href="cart" id="show-cart" >
+								<i class="fa fa-cart-arrow-down fa-2x icon-header" id="icon-show" aria-hidden="true" style="color: #fff"></i></a>
+							</span>
+							<?php 
+							if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
+								?>
+								<span id="cart_nums"><?php echo $_SESSION['cart_qty']; ?></span>
+								<?php
+							}else{
+								?>
+								<span id="cart_nums">0</span>
+								<?php
+							}
+							?>	
+						</div>
+					</div>
+
+					</div>
+					<!-- Phần nav responsive -->
+					<div class="collapse navbar-collapse navbar-ex2-collapse" id="res-nav">
+						<ul class="nav res-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="home">Trang chủ</a>
+							</li>
+
+							<li class="nav-item">
+								<a href="javascript:;" class="hidden-drop" data-toggle="collapse" data-target="#demo4"> Marvel <i class="fa fa-fw fa-caret-down"></i></a>
+								<ul  class="collapse " id="demo4" style="z-index: 9999">
+									<a href="list-product/modeltoyMV/pages1">
+										<li>
+											Mô hình
+										</li>
+									</a>
+									<a href="list-product/techMV/pages1">
+										<li>
+											Đồ chơi công nghệ
+										</li>
+									</a>
+									<a href="list-product/itemsMV/pages1">
+										<li>
+											Phụ kiện
+										</li>
+									</a>
+
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a href="javascript:;" class="hidden-drop" data-toggle="collapse" data-target="#demo5"> DC <i class="fa fa-fw fa-caret-down"></i></a>
+								<ul  class="collapse " id="demo5">
+									<a href="list-product/modeltoyDC/pages1">
+										<li>
+											Mô hình
+										</li>
+									</a>
+									<a href="list-product/techDC/pages1">
+										<li>
+											Đồ chơi công nghệ
+										</li>
+									</a>
+									<a href="list-product/itemsDC/pages1">
+										<li>
+											Phụ kiện
+										</li>
+									</a>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a href="javascript:;" class="hidden-drop" data-toggle="collapse" data-target="#demo6"> Transformer <i class="fa fa-fw fa-caret-down"></i></a>
+								<ul id="demo6" class="collapse">
+									<a href="list-product/modeltoyTrans/pages1">
+										<li>
+											Mô hình
+										</li>
+									</a>
+
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="list-product/hot/pages1">Hot sale</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="info/news">Chỉ dẫn mua hàng</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="info/contact">Liên hệ</a>
+							</li>
+						</ul>
+					</div>
+					<!-- END -->
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav" id="menu_nav">
+							<li class=" nav-item" >
+								<a class="nav-link" href="home">TRANG CHỦ</a>
+							</li>
+							<li class="dropdown">
+								<a href="list-product/marvel/pages1">MARVEL <b class="caret"></b></a>
+								<ul class="dropdown-menu" id="check1">
+									<li><a href="list-product/modeltoyMV/pages1">Mô hình</a></li>
+									<li><a href="list-product/techMV/pages1">Đồ chơi công nghệ</a></li>
+									<li><a href="list-product/itemsMV/pages1">Phụ kiện</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="list-product/dc/pages1" class="dropdown-toggle" >DC <b class="caret"></b></a>
+								<ul class="dropdown-menu" id="check2">
+									<li><a href="list-product/modeltoyDC/pages1">Mô hình</a></li>
+									<li><a href="list-product/techDC/pages1">Đồ chơi công nghệ</a></li>
+									<li><a href="list-product/itemsDC/pages1">Phụ kiện</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="list-product/trans/pages1" class="dropdown-toggle" class="dropdown-toggle" >TRANSFORMER<b class="caret"></b></a>
+								<ul class="dropdown-menu check" id="check3">
+									<li><a href="list-product/trans/pages1">Mô hình</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="list-product/hot/pages1">HOT SALE</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="info/news">CHỈ DẪN MUA HÀNG</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="info/contact">LIÊN HỆ</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>

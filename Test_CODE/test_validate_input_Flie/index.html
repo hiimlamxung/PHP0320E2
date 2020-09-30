@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form đăng ký</title>
+	<link rel="stylesheet" type="text/css" href="myCss.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="left" class="content" >
+			<form action="" method="" onsubmit="return Get()" enctype='multipart/form-data' >
+				<label>Họ tên  &nbsp<span id="spanname">(*)</span></label><br><input type="text" name="" id="name" onblur="Blurname()"><br><br><br>
+				<label>Số điện thoại &nbsp<span id="spanphone">(*)</span></label><br><input type="text" name="" id="phone" onblur="Blurphone()"><br><br><br>
+				<label>Email &nbsp<span id="spanemail">(*)</span></label><br><input type="text" name="" id="email" onblur="Bluremail()"><br><br><br>
+				<label>Mật khẩu &nbsp<span id="spanpass">(*)</span></label><br><input type="text" name="" id="pass" onblur="Blurpass()"><br><br><br>
+				<label>Xác nhận mật khẩu &nbsp<span id="spanrepass">(*)</span></label><br><input type="text" name="" id="repass" onblur="Blurrepass()"><br><br><br>
+				<label>List ảnh <span id="file_error">*</span></label><br>
+				<input type="file" id="filePHOTO" multiple="" type="file" name="file_upload1[]" class="file_upload1" onchange="validate_files()" ><br>
+				<button> Đăng ký </button>
+			</form>
+		</div>
+		<div id="right" class="content">
+			<table border="1" id="table">
+				<tr>
+					<th>Họ tên</th>
+					<td id="show_name"></td>
+				</tr>
+				<tr>
+					<th> Số điện thoại</th>
+					<td id="show_phone"></td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td id="show_email"></td>
+				</tr>
+				<tr>
+					<th>Mật khẩu</th>
+					<td id="show_pass"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript" src="myJs.js"></script>
+</body>
+</html>

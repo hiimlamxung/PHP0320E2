@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.star{
+			width: 20px;
+
+		}
+		.star:hover{
+			transform: scale(1.1);
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<input type="radio" name="star_val" value="1" class="1_star">1
+		<input type="radio" name="star_val" value="2" class="2_star" >2
+		<input type="radio" name="star_val" value="3" class="3_star">3
+		<input type="radio" name="star_val" value="4" class="4_star">4
+		<input type="radio" name="star_val" value="5" class="5_star">5
+		<br>
+		<div>
+		<img src="white_star2.png" alt="" class="star" id="1_star">
+		<img src="white_star2.png" alt="" class="star" id="2_star">
+		<img src="white_star2.png" alt="" class="star" id="3_star">
+		<img src="white_star2.png" alt="" class="star" id="4_star">
+		<img src="white_star2.png" alt="" class="star" id="5_star">
+		</div>
+</form>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$(document).on('click', '.star', function(e) {
+			var id=$(this).attr('id');
+			// alert(id);
+			$(this).attr('src','gold_star.png');
+			$(this).prevAll().attr('src','gold_star.png');
+			$(this).nextAll().attr('src','white_star2.png');
+			$('.'+id).click();
+			
+		});
+	})
+</script>
+
+
+
+	
+</body>
+</html>
