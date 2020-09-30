@@ -28,7 +28,7 @@
 
 		</table>
 	</div></div>
-	<a href="">click</a>
+	<a href="">click to reload</a>
 
 
 
