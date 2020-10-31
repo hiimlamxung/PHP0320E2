@@ -25,7 +25,7 @@
 						</tr>
 					</thead>
 					<tbody id="show_data">
-					
+
 					</tbody>
 
 				</table>
@@ -53,11 +53,11 @@
 							result += '</tr>';
 						});
 
-						
 						$("#show_data").append(result);
+
 					})
-		
-					
+
+
 				});
 			})
 		</script>

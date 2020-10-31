@@ -157,17 +157,18 @@
 	// 	private $phone;
 	// 	protected $email;
 
-	// 	protected function getInfo(){
+	// 	private function getInfo(){
 	// 		echo "Email: ".$this->email;
 	// 	}
 	// }
 	// class TungTK extends Person3{ //Kế thừa Person3
 	// 	public function setValue($phone,$email){
-	// 		$this->phone=$phone;
+	// 		$this->phone=$phone;// Mặc dù $phone để private,những vẫn được. Bời vì class TungTK kế thừa class Person3. Person3 có thuộc tính gì,thì TungTK cũng sẽ có thuộc tính đó
 	// 		$this->email=$email;
 	// 	}
 	// 	public function getValue(){
 	// 		echo $this->phone." ".$this->email;
+	// 		echo parent::getInfo(); //sẽ k được, vì phương thức getInfo đang để private
 	// 	}
 	// }
 
@@ -176,7 +177,7 @@
 	// echo $per3->getInfo(); // k lay dc
 
 	// $TungTK=new TungTK();
-	// echo $TungTK->name;
+	// echo $TungTK->name; // lay dc
 	// echo $TungTK->phone; // k dc
 	// echo $TungTK->email; // k dc
 
